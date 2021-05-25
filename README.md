@@ -1,5 +1,7 @@
-# forex-email-notifier
+# Forex Email Notifier
 Send forex rates periodically to a list of recipients/subscribers 
+
+Notice the code only supports fetching the pair **EUR/AED** but can be easily adapted. 
 
 ## Configuration
 - Forex rate is fetched from https://fixer.io/. You need an API access key to be able to fetch anything.
@@ -15,8 +17,10 @@ const receivers=process.env.FOREX_EMAIL_NOTIFIER_RECIPIENTS; // usage see https:
 ```
 
 ## Run
-Once configured, simply run:
+Once configured, simply run (locally):
 
 ```javascript
 npm run start
 ```
+
+You can setup a cron job to execute it on a regular basis. See [github action](.github/workflows/notifier.yml)
