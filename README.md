@@ -5,7 +5,7 @@ Notice the code only supports fetching the pair **EUR/AED** but can be easily ad
 
 ## Configuration
 - Forex rate is fetched from https://fixer.io/. You need an API access key to be able to fetch anything.
-- A smtp server and a mail client. You can use Gmail for instance. 
+- A smtp server and a mail client. You can use MailGun for instance. 
 
 The following parameters need to be set as environment variables:
 
