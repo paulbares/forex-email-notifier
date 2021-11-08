@@ -22,13 +22,15 @@ async function main() {
     },
   });
 
+  const content = `EUR to AED rate as of ${result.data.date}: ${result.data.rates.AED}`;
+ 
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: '"Fred Foo 👻" <foo@example.com>', // sender address
     to: receivers, // list of receivers
-    subject: `EUR to AED rate as of ${result.data.date}: ${result.data.rates.AED}`,
-    text: "No content", // plain text body
-    html: "No content", // html body
+    subject: `${result.data.rates.AED}`,
+    text: content, // plain text body
+    html: content, // html body
   });
 
   console.log("Message sent: %s", info.messageId);
